@@ -1,6 +1,4 @@
-# Awesome MCP Security
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome MCP Security [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of security tools, frameworks, scanners, gateways, and resources for the Model Context Protocol (MCP).
 
@@ -29,7 +27,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 - [invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) - Detects prompt injection, tool poisoning, and other security issues in MCP servers. By Invariant Labs.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) - Security scanner for AI agents, MCP servers, and agent skills. By Snyk.
 - [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) - Scans MCP servers for potential threats and security findings. By Cisco AI Defense.
-- [tayler-id/mcphound](https://github.com/tayler-id/mcphound) - Comprehensive MCP security scanner. Attack paths, tool poisoning, typosquats, CVEs, trust scores, rug-pull detection.
+- [tayler-id/mcphound](https://github.com/tayler-id/mcphound) - Comprehensive MCP security scanner covering attack paths, tool poisoning, typosquats, CVEs, trust scores, and rug-pull detection.
 - [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
 - [slowmist/MCP-Security-Checklist](https://github.com/slowmist/MCP-Security-Checklist) - Comprehensive security checklist for MCP-based AI tools. By SlowMist.
 - [MCPGuard](https://usemcpguard.io/) - Security scanner for MCP servers. Commercial with free tier.
@@ -38,7 +36,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 
 Infrastructure that sits between MCP clients and servers to enforce policy, log traffic, and control access.
 
-- [valtors/observer](https://github.com/valtors/observer) - Transparent MCP proxy for agent observability. SQLite trace storage, metadata-only by default, redaction patterns, session isolation.
+- [valtors/observer](https://github.com/valtors/observer) - Transparent MCP proxy for agent observability. SQLite trace storage, metadata-only by default, redaction patterns, session isolation. By Valtors.
 - [reaatech/mcp-gateway](https://github.com/reaatech/mcp-gateway) - Production MCP gateway with OAuth/OIDC, API key auth, per-tenant rate limiting, schema enforcement, tool allowlists, audit trail.
 - [lasso-security/mcp-gateway](https://github.com/lasso-security/mcp-gateway) - Plugin-based gateway that orchestrates MCPs with enterprise-grade security. By Lasso Security.
 - [enkryptai/secure-mcp-gateway](https://github.com/enkryptai/secure-mcp-gateway) - Admin-level gateway with guardrails at each MCP server to prevent security issues.
@@ -59,7 +57,6 @@ Runtime enforcement tools that block malicious requests, detect threats, and app
 
 Tools that log, trace, and monitor MCP interactions for debugging, auditing, and incident response.
 
-- [valtors/observer](https://github.com/valtors/observer) - Transparent MCP proxy with SQLite trace storage, metadata-only logging, redaction patterns, and session isolation. Single Go binary.
 - [traceloop/opentelemetry-mcp-server](https://github.com/traceloop/opentelemetry-mcp-server) - Unified MCP server for querying OpenTelemetry traces across Jaeger, Tempo, Traceloop.
 - [xprilion/mcp-telemetry](https://github.com/xprilion/mcp-telemetry) - Adds tracing to all MCP client conversations for debugging and reporting.
 - [theharithsa/opentelemetry-instrumentation-mcp](https://github.com/theharithsa/opentelemetry-instrumentation-mcp) - Automatic OpenTelemetry instrumentation for the MCP TypeScript SDK.
@@ -92,11 +89,10 @@ Tools and libraries for authenticating MCP clients and servers.
 
 Tools for penetration testing MCP deployments and security research.
 
-- [cyproxio/mcp-for-security](https://github.com/cyproxio/mcp-for-security) - MCP servers for security tools: SQLMap, FFUF, NMAP, Massacan. Integrate pentesting into AI workflows.
+- [cyproxio/mcp-for-security](https://github.com/cyproxio/mcp-for-security) - MCP servers for security tools: SQLMap, FFUF, NMAP, Masscan. Integrate pentesting into AI workflows.
 - [FuzzingLabs/mcp-security-hub](https://github.com/FuzzingLabs/mcp-security-hub) - Offensive security MCP servers: Nmap, Ghidra, Nuclei, SQLMap, Hashcat.
 - [securityfortech/secops-mcp](https://github.com/securityfortech/secops-mcp) - All-in-one security testing toolbox through a single MCP interface. Pentesting, bug bounty, threat hunting.
 - [Puliczek/awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security) - List of MCP security exploits, POCs, writeups, and bug bounty resources.
-- [promptfoo MCP Security Testing](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/) - Red-team framework for testing MCP servers against injection, poisoning, and data exfiltration.
 
 ## Guides and Best Practices
 
@@ -120,8 +116,4 @@ Tools for penetration testing MCP deployments and security research.
 
 ## Contributing
 
-Contributions are welcome. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines before submitting a pull request.
-
-## License
-
-[CC0-1.0](LICENSE) - Public domain. Use it however you want.
+Contributions are welcome. Please read the [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
