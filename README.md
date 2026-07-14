@@ -16,7 +16,6 @@ MCP is an open protocol that standardizes how AI agents connect to external tool
 - [Offensive Security and Testing](#offensive-security-and-testing)
 - [Guides and Best Practices](#guides-and-best-practices)
 - [Research and Standards](#research-and-standards)
-- [Contributing](#contributing)
 
 ---
 
