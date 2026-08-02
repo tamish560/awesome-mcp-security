@@ -106,6 +106,7 @@ Tools for penetration testing MCP deployments and security research.
 
 ## Research and Standards
 
+- [AVE (Agentic Vulnerability Enumeration)](https://github.com/aveproject/ave) - Open standard assigning stable IDs to behavioral vulnerability classes in agentic AI components: MCP servers, agent skills, LLM plugins. Crosswalked into OWASP's MCP Top 10 and MITRE ATLAS.
 - [NSA MCP Security Guide (PDF)](https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF) - NSA Cybersecurity Information sheet on MCP security.
 - [Cloud Security Alliance: Agentic MCP Security Best Practices](https://labs.cloudsecurityalliance.org/agentic/agentic-mcp-security-best-practices-v1/) - CSA best practices for agentic MCP security.
 - [MCP-Guard: Defense-in-Depth Framework (Paper)](https://arxiv.org/abs/2508.10991) - Academic paper on multi-stage defense framework for MCP.
