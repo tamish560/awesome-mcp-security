@@ -43,6 +43,7 @@ Infrastructure that sits between MCP clients and servers to enforce policy, log 
 - [qm-labs/agent-mcp-gateway](https://github.com/qm-labs/agent-mcp-gateway) - Per-subagent MCP access controls. Loads only 3 tools instead of all definitions. Prevents context window bloat.
 - [sparfenyuk/mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) - Bridge between Streamable HTTP and stdio MCP transports.
 - [smart-mcp-proxy/mcpproxy-go](https://github.com/smart-mcp-proxy/mcpproxy-go) - Go-based MCP proxy with security features.
+- [SealGate](https://sealgate.ai) - Auth, RBAC, and data-loss-prevention gateway for MCP and agentic AI; enforces per-agent access to tools and data with live DLP.
 
 ## Firewalls and Guardrails
 
