@@ -31,6 +31,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 - [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
 - [slowmist/MCP-Security-Checklist](https://github.com/slowmist/MCP-Security-Checklist) - Comprehensive security checklist for MCP-based AI tools. By SlowMist.
 - [MCPGuard](https://usemcpguard.io/) - Security scanner for MCP servers. Commercial with free tier.
+- [Ventrova/sentinel-scan-cli](https://github.com/Ventrova/sentinel-scan-cli) - Runs a 15-attack prompt-injection suite against your own LLM endpoint. Fully offline, no API key or cloud upload required. By Ventrova.
 
 ## Gateways and Proxies
 
