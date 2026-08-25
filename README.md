@@ -52,6 +52,7 @@ Runtime enforcement tools that block malicious requests, detect threats, and app
 - [General-Analysis/mcp-guard](https://github.com/General-Analysis/mcp-guard) - Secures MCP clients from prompt injection attacks and other threats.
 - [GenTelLab/MCP-Guard](https://github.com/GenTelLab/MCP-Guard) - Multi-stage defense-in-depth framework for securing MCP in agentic AI. Research-backed.
 - [promptfoo](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/) - Red-team testing framework with MCP proxy for enterprise security testing.
+- [norviq-dev/norviq](https://github.com/norviq-dev/norviq) - Policy enforcement point for MCP tool calls. Scans tool definitions at discovery and content-hash pins six fields per tool, then evaluates OPA/Rego policy on every tools/call. By Santosh Kumar Puppala.
 
 ## Observability and Tracing
 
@@ -103,6 +104,7 @@ Tools for penetration testing MCP deployments and security research.
 - [Microsoft MCP for Beginners - Security](https://github.com/microsoft/mcp-for-beginners/blob/main/02-Security/mcp-best-practices.md) - Microsoft's security module for MCP beginners.
 - [Red Hat: MCP Security Risks and Controls](https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls) - Enterprise perspective on MCP security risks.
 - [Microsoft: Protecting Against Indirect Prompt Injection in MCP](https://developer.microsoft.com/blog/protecting-against-indirect-injection-attacks-mcp) - How to defend against indirect prompt injection attacks via MCP.
+- [The MCP server you approved is not the one running tomorrow](https://norviq.dev/blog/the-mcp-server-you-approved/) - Why an approved tool definition is not the one served later: rug pulls, notifications/tools/list_changed, and renames. Includes measured evasion results against a shipped scanner.
 
 ## Research and Standards
 
