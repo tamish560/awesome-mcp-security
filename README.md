@@ -23,6 +23,7 @@ MCP is an open protocol that standardizes how AI agents connect to external tool
 
 Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malicious behavior.
 
+- [BackBond/agent-scan](https://github.com/BackBond/agent-scan) - Local deterministic static scanner and pre-attachment gate for MCP and AI-agent tool metadata. Returns fail-closed tri-state decisions without starting the proposed server or executing its tools. By BackBond.
 - [invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) - Detects prompt injection, tool poisoning, and other security issues in MCP servers. By Invariant Labs.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) - Security scanner for AI agents, MCP servers, and agent skills. By Snyk.
 - [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) - Scans MCP servers for potential threats and security findings. By Cisco AI Defense.
