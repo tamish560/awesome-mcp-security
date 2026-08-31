@@ -111,6 +111,7 @@ Tools for penetration testing MCP deployments and security research.
 - [MCP-Guard: Defense-in-Depth Framework (Paper)](https://arxiv.org/abs/2508.10991) - Academic paper on multi-stage defense framework for MCP.
 - [MindGuard: Tool Poisoning Detection (Paper)](https://arxiv.org/html/2508.20412v1) - Research on tracking, detecting, and attributing MCP tool poisoning attacks.
 - [SecAppDev 2026: MCP Security](https://secappdev.org/2026/sessions/model-context-protocol-mcp-security) - Conference session on MCP security fundamentals.
+- [State of MCP Security 2026](https://catalog.mcpsecurity.cloud/research/state-of-mcp-security-2026) - Evidence-bounded ecosystem research covering 71,565 canonical MCP implementations, publisher attribution, distribution channels, remote exposure, observed tool authority, cross-MCP risk composition, and verification coverage. By MCP Security.
 
 ---
 
