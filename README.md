@@ -23,6 +23,7 @@ MCP is an open protocol that standardizes how AI agents connect to external tool
 
 Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malicious behavior.
 
+- [currentlycurrently/acidtest](https://github.com/currentlycurrently/acidtest) - Security scanner and author-side linter for MCP servers and agent skills. `acidtest lint` flags injected instructions, tool poisoning, covert parameters, and cross-server shadowing in your own tool descriptions before you publish; also detects credential exfiltration and rug-pull updates, and runs as an MCP server. Open source (MIT).
 - [invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) - Detects prompt injection, tool poisoning, and other security issues in MCP servers. By Invariant Labs.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) - Security scanner for AI agents, MCP servers, and agent skills. By Snyk.
 - [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) - Scans MCP servers for potential threats and security findings. By Cisco AI Defense.
