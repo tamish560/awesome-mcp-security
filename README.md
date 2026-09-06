@@ -43,6 +43,7 @@ Infrastructure that sits between MCP clients and servers to enforce policy, log 
 - [qm-labs/agent-mcp-gateway](https://github.com/qm-labs/agent-mcp-gateway) - Per-subagent MCP access controls. Loads only 3 tools instead of all definitions. Prevents context window bloat.
 - [sparfenyuk/mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) - Bridge between Streamable HTTP and stdio MCP transports.
 - [smart-mcp-proxy/mcpproxy-go](https://github.com/smart-mcp-proxy/mcpproxy-go) - Go-based MCP proxy with security features.
+- [Aggrete](https://github.com/Aggrete/aggrete) - MCP policy proxy that enforces a code-of-conduct document across connectors: deny-before-fetch rules with per-user cross-session accumulation (joins, aggregation, min-group), a prompt-injection egress shield, tool-integrity (rug-pull and poisoning) checks, inbound-secret blocking and output redaction, per-user rate limiting, and a tamper-evident audit. Deterministic, no model in the decision path. Apache-2.0.
 
 ## Firewalls and Guardrails
 
