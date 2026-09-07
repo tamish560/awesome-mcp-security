@@ -92,6 +92,7 @@ Tools for penetration testing MCP deployments and security research.
 - [cyproxio/mcp-for-security](https://github.com/cyproxio/mcp-for-security) - MCP servers for security tools: SQLMap, FFUF, NMAP, Masscan. Integrate pentesting into AI workflows.
 - [FuzzingLabs/mcp-security-hub](https://github.com/FuzzingLabs/mcp-security-hub) - Offensive security MCP servers: Nmap, Ghidra, Nuclei, SQLMap, Hashcat.
 - [securityfortech/secops-mcp](https://github.com/securityfortech/secops-mcp) - All-in-one security testing toolbox through a single MCP interface. Pentesting, bug bounty, threat hunting.
+- [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon): Open source autonomous offensive security platform that orchestrates 50 specialist agents over MCP with reproducible proof of exploitation.
 - [Puliczek/awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security) - List of MCP security exploits, POCs, writeups, and bug bounty resources.
 
 ## Guides and Best Practices
