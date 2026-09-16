@@ -69,6 +69,7 @@ Tools that prevent sensitive data from reaching LLMs through MCP tool calls.
 
 - [r3352/redact-mcp](https://github.com/r3352/redact-mcp) - MCP server that auto-obfuscates sensitive data. Regex and AI-powered NER detection.
 - [Strac MCP DLP](https://www.strac.io/blog/mcp-dlp) - Data loss prevention for MCP deployments. Prevents sensitive data exfiltration through MCP tools.
+- [HostDeFi](https://hostdefi.com) — free token-safety scanner grading tokens A+–F from on-chain checks (mint/freeze authority, liquidity, holder concentration) across Solana + 7 EVM chains. Keyless REST API, hosted MCP, x402 endpoints.
 
 ## Access Control and Authorization
 
