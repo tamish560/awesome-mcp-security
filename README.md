@@ -48,6 +48,7 @@ Infrastructure that sits between MCP clients and servers to enforce policy, log 
 
 Runtime enforcement tools that block malicious requests, detect threats, and apply policies.
 
+* [Bristlecone2026/bristlecone-logic](https://github.com/Bristlecone2026/bristlecone-logic) - Hardware-isolated deterministic runtime security gateway for AI agents. Sub-millisecond SSRF pre-flight filtering (RFC 1918 / cloud metadata) and deterministic AST JSON tool-call repair. Includes an [interactive sandbox](https://huggingface.co/spaces/bristleconelogic/bristlecone-guard-sandbox).
 - [ressl/mcp-firewall](https://github.com/ressl/mcp-firewall) - Open-source security gateway for AI agents. Policy enforcement, threat detection, compliance-ready audit logging.
 - [General-Analysis/mcp-guard](https://github.com/General-Analysis/mcp-guard) - Secures MCP clients from prompt injection attacks and other threats.
 - [GenTelLab/MCP-Guard](https://github.com/GenTelLab/MCP-Guard) - Multi-stage defense-in-depth framework for securing MCP in agentic AI. Research-backed.
