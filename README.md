@@ -111,6 +111,7 @@ Tools for penetration testing MCP deployments and security research.
 - [MCP-Guard: Defense-in-Depth Framework (Paper)](https://arxiv.org/abs/2508.10991) - Academic paper on multi-stage defense framework for MCP.
 - [MindGuard: Tool Poisoning Detection (Paper)](https://arxiv.org/html/2508.20412v1) - Research on tracking, detecting, and attributing MCP tool poisoning attacks.
 - [SecAppDev 2026: MCP Security](https://secappdev.org/2026/sessions/model-context-protocol-mcp-security) - Conference session on MCP security fundamentals.
+- [Continuum-AI-Corp/Orca-AI-Incident-Archive](https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive) - Open, source-linked database of real-world AI agent security incidents, with 31 MCP-tagged records including the MCPwn nginx-ui MCP endpoint exploited in the wild. By Continuum AI Corp.
 
 ---
 
