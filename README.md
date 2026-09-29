@@ -29,6 +29,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 - [tayler-id/mcphound](https://github.com/tayler-id/mcphound) - Comprehensive MCP security scanner covering attack paths, tool poisoning, typosquats, CVEs, trust scores, and rug-pull detection.
 - [tamish560/mcprobe](https://github.com/tamish560/mcprobe) - Security scanner for MCP servers. Detects prompt injection in tool descriptions, tool shadowing, and drift (rug-pull). Single binary, zero dependencies, Go stdlib only. Outputs text, JSON, and SARIF.
 - [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
+- [SyedAnas01/mcp-safeguard](https://github.com/SyedAnas01/mcp-safeguard) - Static-analysis security scanner for MCP servers. Checks for prompt injection, credential exposure, SSRF, and tool-poisoning risks across 148 rules. Used to find CVE-2026-14540 (Google MCP Toolbox) and SSRF in Anthropic's mcp-server-fetch and Microsoft's playwright-mcp.
 - [slowmist/MCP-Security-Checklist](https://github.com/slowmist/MCP-Security-Checklist) - Comprehensive security checklist for MCP-based AI tools. By SlowMist.
 - [MCPGuard](https://usemcpguard.io/) - Security scanner for MCP servers. Commercial with free tier.
 
