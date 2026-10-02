@@ -30,6 +30,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 - [tamish560/mcprobe](https://github.com/tamish560/mcprobe) - Security scanner for MCP servers. Detects prompt injection in tool descriptions, tool shadowing, and drift (rug-pull). Single binary, zero dependencies, Go stdlib only. Outputs text, JSON, and SARIF.
 - [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
 - [slowmist/MCP-Security-Checklist](https://github.com/slowmist/MCP-Security-Checklist) - Comprehensive security checklist for MCP-based AI tools. By SlowMist.
+- [OssaBellator/ai-agent-hardening](https://github.com/OssaBellator/ai-agent-hardening) - Dependency-free static repository scanner and GitHub Action for MCP configuration, agent instruction files, selected CI authority signals, dependency surfaces, and common credential-pattern classes; target code is not executed and suspected secret values are not printed. By OssaBellator.
 - [MCPGuard](https://usemcpguard.io/) - Security scanner for MCP servers. Commercial with free tier.
 
 ## Gateways and Proxies
