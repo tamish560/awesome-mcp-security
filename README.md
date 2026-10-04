@@ -26,6 +26,7 @@ Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malic
 - [invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) - Detects prompt injection, tool poisoning, and other security issues in MCP servers. By Invariant Labs.
 - [snyk/agent-scan](https://github.com/snyk/agent-scan) - Security scanner for AI agents, MCP servers, and agent skills. By Snyk.
 - [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) - Scans MCP servers for potential threats and security findings. By Cisco AI Defense.
+- [fernandogarzaaa/sigil](https://github.com/fernandogarzaaa/sigil) - Signed trust index for MCP servers: static and behavioral security scanning, fuzzing, and Ed25519-signed version-pinned badges published to a public git-backed index. By Inan.
 - [tayler-id/mcphound](https://github.com/tayler-id/mcphound) - Comprehensive MCP security scanner covering attack paths, tool poisoning, typosquats, CVEs, trust scores, and rug-pull detection.
 - [tamish560/mcprobe](https://github.com/tamish560/mcprobe) - Security scanner for MCP servers. Detects prompt injection in tool descriptions, tool shadowing, and drift (rug-pull). Single binary, zero dependencies, Go stdlib only. Outputs text, JSON, and SARIF.
 - [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
