@@ -76,6 +76,7 @@ Tools for restricting which tools agents can call and managing permissions.
 
 - [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Specification for MCP security gateways and agent governance in enterprise environments.
 - [clerk/mcp-tools](https://github.com/clerk/mcp-tools) - Tools for building secure MCP integrations across client and server side. By Clerk.
+- [Praesidia](https://praesidia.ai/mcp) - MCP governance gateway with per-connection tool permissions, argument constraints and human approvals for supported calls routed through Praesidia; includes a free Developer plan. By Praesidia.
 - [Sandbox0 MCP Access Control](https://sandbox0.ai/blog/2026-05/mcp-tool-access-control-protocol-controls) - Restrict which tools AI agents can call through protocol-level controls.
 
 ## Authentication
