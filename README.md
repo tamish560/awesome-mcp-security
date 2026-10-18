@@ -52,6 +52,7 @@ Runtime enforcement tools that block malicious requests, detect threats, and app
 - [General-Analysis/mcp-guard](https://github.com/General-Analysis/mcp-guard) - Secures MCP clients from prompt injection attacks and other threats.
 - [GenTelLab/MCP-Guard](https://github.com/GenTelLab/MCP-Guard) - Multi-stage defense-in-depth framework for securing MCP in agentic AI. Research-backed.
 - [promptfoo](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/) - Red-team testing framework with MCP proxy for enterprise security testing.
+- [ve-loma/traceguard](https://github.com/ve-loma/traceguard) - Local runtime guard for AI agents and MCP tool calls: deterministic pre-execution blocking, a circuit breaker for retry loops, action-level snapshot rollback, and an encrypted hash-chained audit log.
 
 ## Observability and Tracing
 
