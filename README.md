@@ -1,72 +1,120 @@
 # Awesome MCP Security [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curation of awesome resources, papers, and tools focused on Model Context Protocol (MCP) security.
+A curated list of security tools, frameworks, scanners, gateways, and resources for the Model Context Protocol (MCP).
 
-Contributions are always welcome. Please read the [Contribution Guidelines](CONTRIBUTING.md) before contributing.
+MCP is an open protocol that standardizes how AI agents connect to external tools and data sources. As adoption grows, so does the attack surface. This list tracks the ecosystem of projects working to make MCP safer.
 
-## Table of Contents
+## Contents
 
-- [Awesome MCP Security](#awesome-mcp-security)
-  - [Table of Contents](#table-of-contents)
-  - [Papers](#papers)
-  - [Security Vulnerabilities](#security-vulnerabilities)
-  - [Tools](#tools)
-  - [Articles and Blog Posts](#articles-and-blog-posts)
-  - [Other Awesome Projects](#other-awesome-projects)
-  - [Other Useful Resources](#other-useful-resources)
+- [Scanners and Auditors](#scanners-and-auditors)
+- [Gateways and Proxies](#gateways-and-proxies)
+- [Firewalls and Guardrails](#firewalls-and-guardrails)
+- [Observability and Tracing](#observability-and-tracing)
+- [Redaction and Data Protection](#redaction-and-data-protection)
+- [Access Control and Authorization](#access-control-and-authorization)
+- [Authentication](#authentication)
+- [Offensive Security and Testing](#offensive-security-and-testing)
+- [Guides and Best Practices](#guides-and-best-practices)
+- [Research and Standards](#research-and-standards)
 
-## Papers
+---
 
-- "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions", 2025-03, [paper](https://arxiv.org/abs/2503.23278)
-- "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits", 2025-04, [paper](https://arxiv.org/abs/2504.03767)
-- "Enterprise-Grade Security for the Model Context Protocol (MCP): Frameworks and Mitigation Strategies",2025-04, [paper](https://arxiv.org/pdf/2504.08623)
+## Scanners and Auditors
 
-## Security Vulnerabilities
+Tools that inspect MCP servers for vulnerabilities, misconfigurations, and malicious behavior.
 
-### Authentication and Authorization
+- [invariantlabs-ai/mcp-scan](https://github.com/invariantlabs-ai/mcp-scan) - Detects prompt injection, tool poisoning, and other security issues in MCP servers. By Invariant Labs.
+- [snyk/agent-scan](https://github.com/snyk/agent-scan) - Security scanner for AI agents, MCP servers, and agent skills. By Snyk.
+- [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) - Scans MCP servers for potential threats and security findings. By Cisco AI Defense.
+- [tayler-id/mcphound](https://github.com/tayler-id/mcphound) - Comprehensive MCP security scanner covering attack paths, tool poisoning, typosquats, CVEs, trust scores, and rug-pull detection.
+- [tamish560/mcprobe](https://github.com/tamish560/mcprobe) - Security scanner for MCP servers. Detects prompt injection in tool descriptions, tool shadowing, and drift (rug-pull). Single binary, zero dependencies, Go stdlib only. Outputs text, JSON, and SARIF.
+- [ModelContextProtocol-Security/mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit) - Audits MCP servers for security problems before use. Part of the Cloud Security Alliance MCP Security initiative.
+- [slowmist/MCP-Security-Checklist](https://github.com/slowmist/MCP-Security-Checklist) - Comprehensive security checklist for MCP-based AI tools. By SlowMist.
+- [MCPGuard](https://usemcpguard.io/) - Security scanner for MCP servers. Commercial with free tier.
+- [Dctify MCP Config Checker](https://dctify.com/tools/mcp-config-checker) - Free web tool that audits MCP client configs for risky servers: permissions, prompt-injection surface, and supply-chain flags. By Dctify (Security Observer).
 
-- **OAuth Token Theft**: MCP servers store authentication tokens for various services, creating a high-value target for attackers ([Pillar Security](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp))
-- **Permission Boundary Problems**: Unclear boundaries between services connected through MCP ([Block InfoSec](https://block.github.io/goose/blog/2025/03/31/securing-mcp/))
+## Gateways and Proxies
 
-### Prompt Injection
+Infrastructure that sits between MCP clients and servers to enforce policy, log traffic, and control access.
 
-- **Tool Description Manipulation**: Hidden instructions in tool descriptions can cause AI models to perform unauthorized actions ([Pillar Security](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp))
-- **Indirect Prompt Injection**: Malicious content embedded in processed documents that trigger MCP actions ([Pillar Security](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp))
+- [valtors/observer](https://github.com/valtors/observer) - Transparent MCP proxy for agent observability. SQLite trace storage, metadata-only by default, redaction patterns, session isolation. By Valtors.
+- [reaatech/mcp-gateway](https://github.com/reaatech/mcp-gateway) - Production MCP gateway with OAuth/OIDC, API key auth, per-tenant rate limiting, schema enforcement, tool allowlists, audit trail.
+- [lasso-security/mcp-gateway](https://github.com/lasso-security/mcp-gateway) - Plugin-based gateway that orchestrates MCPs with enterprise-grade security. By Lasso Security.
+- [enkryptai/secure-mcp-gateway](https://github.com/enkryptai/secure-mcp-gateway) - Admin-level gateway with guardrails at each MCP server to prevent security issues.
+- [qm-labs/agent-mcp-gateway](https://github.com/qm-labs/agent-mcp-gateway) - Per-subagent MCP access controls. Loads only 3 tools instead of all definitions. Prevents context window bloat.
+- [sparfenyuk/mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) - Bridge between Streamable HTTP and stdio MCP transports.
+- [smart-mcp-proxy/mcpproxy-go](https://github.com/smart-mcp-proxy/mcpproxy-go) - Go-based MCP proxy with security features.
 
-### Supply Chain
+## Firewalls and Guardrails
 
-- **Installer Risks**: MCP server installers without proper validation can introduce security risks ([arxiv:2503.23278](https://arxiv.org/abs/2503.23278))
-- **Tool Name Conflicts**: Naming collisions in MCP tools can lead to confusion and security issues ([arxiv:2503.23278](https://arxiv.org/abs/2503.23278))
+Runtime enforcement tools that block malicious requests, detect threats, and apply policies.
 
-## Tools
+- [ressl/mcp-firewall](https://github.com/ressl/mcp-firewall) - Open-source security gateway for AI agents. Policy enforcement, threat detection, compliance-ready audit logging.
+- [General-Analysis/mcp-guard](https://github.com/General-Analysis/mcp-guard) - Secures MCP clients from prompt injection attacks and other threats.
+- [GenTelLab/MCP-Guard](https://github.com/GenTelLab/MCP-Guard) - Multi-stage defense-in-depth framework for securing MCP in agentic AI. Research-backed.
+- [promptfoo](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/) - Red-team testing framework with MCP proxy for enterprise security testing.
 
-- [MCP Specification](https://spec.modelcontextprotocol.io/specification/2025-03-26/) - Official MCP specification with security recommendations
-- [Glama.ai MCP Server Directory](https://block.github.io/goose/blog/2025/03/26/mcp-security/) - Security-aware directory of MCP servers with security scoring
-- [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server) - A server intentionally designed with flaws for security testing and training.
-- [MCP-scan](https://github.com/invariantlabs-ai/mcp-scan?tab=readme-ov-file) - Security scanning tool designed to go over your installed MCP servers and check them for common security vulnerabilities like prompt injections, tool poisoning and cross-origin escalations.
-- [ToolHive](https://github.com/StacklokLabs/toolhive) - Lightweight utility designed to simplify the deployment and management of MCP servers, ensuring ease of use, consistency, and security.
-- [MCP-Shield](https://github.com/riseandignite/mcp-shield) - Scans your installed MCP servers and detects vulnerabilities like tool poisoning attacks, exfiltration channels and cross-origin escalations.
-- [mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments/tree/main) - MCP Tool Poisoning Experiments
-- [MCP Guardian](https://github.com/eqtylab/mcp-guardian) - Manages your LLM assistant's access to MCP servers, handing you realtime control of your LLM's activity.
+## Observability and Tracing
 
-## Articles and Blog Posts - 
+Tools that log, trace, and monitor MCP interactions for debugging, auditing, and incident response.
 
-- [The Security Risks of Model Context Protocol (MCP)](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp) - Analysis of OAuth token theft and prompt injection risks
-- [Securing the Model Context Protocol](https://block.github.io/goose/blog/2025/03/31/securing-mcp/) - Best practices for MCP security by Block's InfoSec team
-- [How to Determine If An MCP Server Is Safe](https://block.github.io/goose/blog/2025/03/26/mcp-security/) - Guidelines for evaluating MCP server security
-- [AI Model Context Protocol (MCP) and Security](https://community.cisco.com/t5/security-blogs/ai-model-context-protocol-mcp-and-security/ba-p/5274394) - Comprehensive guide by Omar Santos covering MCP security architecture, authentication best practices, data security, and tool exposure security considerations
-- [AI agent identity: it's just OAuth](https://mayakaczorowski.com/blogs/ai-agent-authentication) - Discussion about Authentication for AI Agents. Mentions OAuth Fails for MCP based AI Agents.
-- [Model Context Protocol has prompt injection security problems](https://simonwillison.net/2025/Apr/9/mcp-prompt-injection/) - As more people start hacking around with implementations of MCP (the Model Context Protocol, a new standard for making tools available to LLM-powered systems) the security implications of tools built on that protocol are starting to come into focus.
-- [The hidden security threats of MCP—and how to mitigate them](https://www.merge.dev/blog/model-context-protocol-security) - Some of the biggest security threats to consider and how you can address them.
-- [MCP & Agent Security Hub (Dctify / Security Observer)](https://dctify.com/topics/mcp-agent-security) - Practical guides on MCP tool poisoning, agent least privilege, agent-skills security review, plus an interactive config checker. Bilingual EN/中文.
+- [traceloop/opentelemetry-mcp-server](https://github.com/traceloop/opentelemetry-mcp-server) - Unified MCP server for querying OpenTelemetry traces across Jaeger, Tempo, Traceloop.
+- [xprilion/mcp-telemetry](https://github.com/xprilion/mcp-telemetry) - Adds tracing to all MCP client conversations for debugging and reporting.
+- [theharithsa/opentelemetry-instrumentation-mcp](https://github.com/theharithsa/opentelemetry-instrumentation-mcp) - Automatic OpenTelemetry instrumentation for the MCP TypeScript SDK.
+- [ContexaAI/mcp-trace-js](https://github.com/ContexaAI/mcp-trace-js) - Tracing middleware for MCP servers in TypeScript. Logs to file, DB, or cloud with OTLP, Supabase, PostgreSQL adapters.
+- [Datadog LLM Observability](https://www.datadoghq.com/blog/mcp-client-monitoring/) - End-to-end visibility into MCP clients with Datadog.
 
+## Redaction and Data Protection
 
-## Other Awesome Projects
+Tools that prevent sensitive data from reaching LLMs through MCP tool calls.
 
-- [Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security) - A curated list focused on LLM security more broadly
-- [Model Context Protocol](https://github.com/modelcontextprotocol) - Official MCP GitHub organization with specification and reference implementations
+- [r3352/redact-mcp](https://github.com/r3352/redact-mcp) - MCP server that auto-obfuscates sensitive data. Regex and AI-powered NER detection.
+- [Strac MCP DLP](https://www.strac.io/blog/mcp-dlp) - Data loss prevention for MCP deployments. Prevents sensitive data exfiltration through MCP tools.
 
-## Other Useful Resources
+## Access Control and Authorization
 
-- [tl;dr sec #272](https://tldrsec.com/p/tldr-sec-272) - Newsletter discussing AI Model Context Protocol Security
-- [tl;dr sec #273](https://tldrsec.com/p/tldr-sec-273) - Newsletter covering MCP security tools and threats
+Tools for restricting which tools agents can call and managing permissions.
+
+- [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Specification for MCP security gateways and agent governance in enterprise environments.
+- [clerk/mcp-tools](https://github.com/clerk/mcp-tools) - Tools for building secure MCP integrations across client and server side. By Clerk.
+- [Sandbox0 MCP Access Control](https://sandbox0.ai/blog/2026-05/mcp-tool-access-control-protocol-controls) - Restrict which tools AI agents can call through protocol-level controls.
+
+## Authentication
+
+Tools and libraries for authenticating MCP clients and servers.
+
+- [mcpauth/mcpauth](https://github.com/mcpauth/mcpauth) - Authentication for MCP servers. OAuth 2.1 implementation.
+- [MCP Auth specification](https://modelcontextprotocol.io/docs/tutorials/security/authorization) - Official MCP authorization documentation.
+
+## Offensive Security and Testing
+
+Tools for penetration testing MCP deployments and security research.
+
+- [cyproxio/mcp-for-security](https://github.com/cyproxio/mcp-for-security) - MCP servers for security tools: SQLMap, FFUF, NMAP, Masscan. Integrate pentesting into AI workflows.
+- [FuzzingLabs/mcp-security-hub](https://github.com/FuzzingLabs/mcp-security-hub) - Offensive security MCP servers: Nmap, Ghidra, Nuclei, SQLMap, Hashcat.
+- [securityfortech/secops-mcp](https://github.com/securityfortech/secops-mcp) - All-in-one security testing toolbox through a single MCP interface. Pentesting, bug bounty, threat hunting.
+- [Puliczek/awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security) - List of MCP security exploits, POCs, writeups, and bug bounty resources.
+
+## Guides and Best Practices
+
+- [MCP Security Best Practices (Official)](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) - Official security best practices from the MCP specification team.
+- [OWASP MCP Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html) - OWASP cheat sheet for securing MCP implementations.
+- [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) - OWASP's top 10 security risks for Model Context Protocol.
+- [OWASP Secure MCP Server Development Guide](https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/) - Practical guide for developers building MCP servers securely.
+- [Microsoft MCP for Beginners - Security](https://github.com/microsoft/mcp-for-beginners/blob/main/02-Security/mcp-best-practices.md) - Microsoft's security module for MCP beginners.
+- [Red Hat: MCP Security Risks and Controls](https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls) - Enterprise perspective on MCP security risks.
+- [Microsoft: Protecting Against Indirect Prompt Injection in MCP](https://developer.microsoft.com/blog/protecting-against-indirect-injection-attacks-mcp) - How to defend against indirect prompt injection attacks via MCP.
+
+## Research and Standards
+
+- [NSA MCP Security Guide (PDF)](https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF) - NSA Cybersecurity Information sheet on MCP security.
+- [Cloud Security Alliance: Agentic MCP Security Best Practices](https://labs.cloudsecurityalliance.org/agentic/agentic-mcp-security-best-practices-v1/) - CSA best practices for agentic MCP security.
+- [MCP-Guard: Defense-in-Depth Framework (Paper)](https://arxiv.org/abs/2508.10991) - Academic paper on multi-stage defense framework for MCP.
+- [MindGuard: Tool Poisoning Detection (Paper)](https://arxiv.org/html/2508.20412v1) - Research on tracking, detecting, and attributing MCP tool poisoning attacks.
+- [SecAppDev 2026: MCP Security](https://secappdev.org/2026/sessions/model-context-protocol-mcp-security) - Conference session on MCP security fundamentals.
+
+---
+
+## Contributing
+
+Contributions are welcome. Please read the [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
