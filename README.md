@@ -51,7 +51,7 @@ Runtime enforcement tools that block malicious requests, detect threats, and app
 - [ressl/mcp-firewall](https://github.com/ressl/mcp-firewall) - Open-source security gateway for AI agents. Policy enforcement, threat detection, compliance-ready audit logging.
 - [General-Analysis/mcp-guard](https://github.com/General-Analysis/mcp-guard) - Secures MCP clients from prompt injection attacks and other threats.
 - [GenTelLab/MCP-Guard](https://github.com/GenTelLab/MCP-Guard) - Multi-stage defense-in-depth framework for securing MCP in agentic AI. Research-backed.
-- [hashgraph-online/hol-guard](https://github.com/hashgraph-online/hol-guard) - Local-first runtime firewall for AI coding agents; intercepts shell, secrets, MCP config changes, and package installs before execution (Apache-2.0). Docs: https://hol.org/guard.
+- [hashgraph-online/hol-guard](https://github.com/hashgraph-online/hol-guard) - Local-first policy checks for supported AI coding-agent tool calls, including MCP and shell actions; approval coverage depends on the agent integration. Apache-2.0. By HOL.
 - [promptfoo](https://www.promptfoo.dev/docs/red-team/mcp-security-testing/) - Red-team testing framework with MCP proxy for enterprise security testing.
 
 ## Observability and Tracing
