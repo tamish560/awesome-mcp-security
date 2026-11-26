@@ -43,6 +43,8 @@ Infrastructure that sits between MCP clients and servers to enforce policy, log 
 - [qm-labs/agent-mcp-gateway](https://github.com/qm-labs/agent-mcp-gateway) - Per-subagent MCP access controls. Loads only 3 tools instead of all definitions. Prevents context window bloat.
 - [sparfenyuk/mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) - Bridge between Streamable HTTP and stdio MCP transports.
 - [smart-mcp-proxy/mcpproxy-go](https://github.com/smart-mcp-proxy/mcpproxy-go) - Go-based MCP proxy with security features.
+- [Marouane2005/AgentTaint](https://github.com/Marouane2005/AgentTaint) - Provenance-aware firewall and stdio proxy that allows, holds, or blocks MCP tool calls based on where sensitive arguments came from. By Marouane El Aasri.
+
 
 ## Firewalls and Guardrails
 
